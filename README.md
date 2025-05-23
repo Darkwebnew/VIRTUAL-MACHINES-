@@ -1,4 +1,4 @@
-# EX 6: MOVING FILES BETWEEN VIRTUAL MACHINES
+# EX - 6 MOVING FILES BETWEEN VIRTUAL MACHINES
 
 ## Aim:
 To move the files between virtual machine.
