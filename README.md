@@ -1,62 +1,66 @@
 # EX - 6 MOVING FILES BETWEEN VIRTUAL MACHINES
 
-## Aim:
-To move the files between virtual machine.
- You can move files between virtual machines in several ways:
-•	You can copy files using network utilities as you would between physical computers on your network. To do this between two virtual machine:
-•	Both virtual machines must be configured to allow access to your network.
-•	Any of the networking methods (host-only, bridged and NAT) are appropriate. 
-•	With host-only networking, you copy files from the virtual machines to the host and vice-versa, since host-only networking only allows the virtual machines see your host computer.
-•	With bridged networking or NAT enabled, you can copy files across your network between the virtual machines.
-•	You can create a shared drive, either a virtual disk or a raw partition, and mount the drive in each of the virtual machines.
-## Procedure:
+## 🎯 AIM:
+To move files between virtual machines (VMs) efficiently.
 
-How to Enable File sharing in VirtualBox. 
-Step 1. Install Guest Additions on the Guest machine. 
-Step 2. Configure File Sharing on VirtualBox. 
- 
-Step 1. Install Guest Additions on the Guest machine. 
-1. Start the Virtuabox Guest Machine (OS). 
-2. From Oracle's VM VirtualBox main menu, select Devices > Install Guest Additions *
+---
 
-a. Open Windows Explorer
-b. Double click at the "CD Drive (X:) VirtualBox Guest additions" to explore its contents.
-		  
-![image](https://github.com/user-attachments/assets/d3dbb341-38c1-4f3e-92f7-0cfe1084e679)
+## 📘 Introduction:
+You can move files between virtual machines using several methods:
+- Using network utilities as on physical systems.
+- Through host-only, bridged, or NAT networking modes.
+- Using shared drives (virtual disks or raw partitions).
+- Sharing a specific folder between host and guest OS using VirtualBox.
 
-C.Right click at "VBoxWindowsAdditions" application and from the pop-up menu, choose "Run as administrator".
- 
-![image](https://github.com/user-attachments/assets/35be1b73-df5c-445e-bb24-94d71f7898e4)
+---
 
-3.Press Next and then follow the on screen instructions to complete the Guest Additions installation.
-	 
-![image](https://github.com/user-attachments/assets/066c93ef-f2fa-40e8-a8f2-041ca2758db1)
+## 🛠️ PROCEDURE:
 
-4. When the setup is completed, choose Finish and restart the Virtuabox guest machine.
-Step 2. Setup File Sharing on VirtualBox Guest Machine.
-1. From VirtualBox menu click Devices and choose Shared Folders -> Shared Folder Settings.
+### ✅ Step 1: Install Guest Additions on the Guest Machine
+1. Start the VirtualBox Guest Machine (OS).
+2. From the VirtualBox top menu, go to:  
+   `Devices > Insert Guest Additions CD image…`
 
-![image](https://github.com/user-attachments/assets/c58d8e37-8a75-47ad-bdc8-800ff55b2ccf)
+   - a. Open **Windows Explorer**  
+   - b. Double-click **CD Drive (X:) VirtualBox Guest Additions** to view contents.  
+     ![image](https://github.com/user-attachments/assets/d3dbb341-38c1-4f3e-92f7-0cfe1084e679)
 
-2. Click the Add new shared folder icon.
- 
-![image](https://github.com/user-attachments/assets/b7cb3277-4fce-4267-8916-04f94a41a2f8)
+   - c. Right-click **VBoxWindowsAdditions** and choose **Run as Administrator**  
+     ![image](https://github.com/user-attachments/assets/35be1b73-df5c-445e-bb24-94d71f7898e4)
 
-3. Click the drop-down arrow and select Other.
- 
-![image](https://github.com/user-attachments/assets/50268dcf-8b14-4592-9a69-439b0639db43)
+3. Click **Next**, follow the on-screen instructions to install Guest Additions  
+   ![image](https://github.com/user-attachments/assets/066c93ef-f2fa-40e8-a8f2-041ca2758db1)
 
-3. Locate and highlight (from the Host OS) the folder that you want to share between the VirtualBox Guest machine and the Host and click Select Folder. *
-* Note: To make your life easier, create a new folder for the file sharing, on the Host OS and give it with a recognizable name. (e.g. "Public")
- 
-![image](https://github.com/user-attachments/assets/076d8f8f-93cc-478e-902b-8d3d0b1474e6)
+4. After installation, click **Finish** and restart the guest machine.
 
-4. Now, in the 'Add Share' options, type a name (if you want) at the 'Folder Name box, click the Auto Mount and the Make Permanent checkboxes and click OK twice to close the Shared Folder Settings.
- 
-![image](https://github.com/user-attachments/assets/3f2c7dc1-5781-43e3-8e36-4e0706d603e0)
+---
 
-5. You 're done! To access the shared folder from the Guest OS, open Windows Explorer and under the 'Network locations' you should see a new network drive that corresponds to the shared folder on the Host OS.
+### ✅ Step 2: Setup File Sharing on VirtualBox Guest Machine
 
-## Result:
+1. From VirtualBox menu: `Devices > Shared Folders > Shared Folder Settings`  
+   ![image](https://github.com/user-attachments/assets/c58d8e37-8a75-47ad-bdc8-800ff55b2ccf)
 
-Thus the virtual machine files are moved to another VM
+2. Click the **Add new shared folder** icon  
+   ![image](https://github.com/user-attachments/assets/b7cb3277-4fce-4267-8916-04f94a41a2f8)
+
+3. Click the drop-down arrow and select **Other**  
+   ![image](https://github.com/user-attachments/assets/50268dcf-8b14-4592-9a69-439b0639db43)
+
+4. From the Host OS, locate and select the folder to share.  
+   > 💡 *Tip: Create a folder like "Public" on the Host for easy sharing.*  
+   ![image](https://github.com/user-attachments/assets/076d8f8f-93cc-478e-902b-8d3d0b1474e6)
+
+5. In **Add Share** options:  
+   - Type a name (optional)  
+   - Check `Auto-mount`  
+   - Check `Make Permanent`  
+   - Click **OK** twice  
+   ![image](https://github.com/user-attachments/assets/3f2c7dc1-5781-43e3-8e36-4e0706d603e0)
+
+6. Done! Open **Windows Explorer** in Guest OS.  
+   - You’ll now see a new network drive under **Network Locations** that maps to your shared folder.
+
+---
+
+## ✅ RESULT:
+Thus, file sharing between virtual machines has been successfully configured using VirtualBox Guest Additions and Shared Folder setup.
